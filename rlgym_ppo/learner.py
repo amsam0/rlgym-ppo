@@ -107,7 +107,9 @@ class Learner(object):
         if device in {"auto", "gpu"} and torch.cuda.is_available():
             self.device = "cuda:0"
             torch.backends.cudnn.benchmark = True
-        elif device == "auto" and not torch.cuda.is_available():
+        elif device in {"auto", "gpu"} and hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            self.device = "mps"
+        elif device == "auto":
             self.device = "cpu"
         else:
             self.device = device
