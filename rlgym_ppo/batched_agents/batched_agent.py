@@ -17,7 +17,7 @@ def batched_agent_process(proc_id, endpoint, shm_buffer, shm_offset, shm_size, s
     import socket
     import time
 
-    import gym
+    import gymnasium as gym
     import numpy as np
 
     from rlgym_ppo.batched_agents import comm_consts

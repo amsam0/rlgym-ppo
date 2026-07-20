@@ -25,11 +25,10 @@ setup(
     install_requires=[
         'cloudpickle>2.0',
         'filelock>3.0',
-        'gym>0.23',
-        'gym-notices==0.0.8',
+        'gymnasium>=1.3',
         'Jinja2>3.0',
         'mpmath>1.0',
-        'numpy>1.21',
+        'numpy>=2.0',
         'sympy>1.10',
         'torch>1.13',
         'wandb>0.15',
